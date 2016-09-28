@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/roulette.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.0.js"></script>
+    <script type="text/javascript" src="scripts/roulette.js"></script>
+	<title>roulette</title>
+</head>
+
+<body ng-controller="myCtrl">
+    <div id="roulette_gif" ng-show="rouletteswitch1"><img src="assets/images/src/producer/roulette.gif" ng-click="switchroulette(false)"/> 
+    </div>
+
+    <div id="roulette_board" ng-show="rouletteswitch2">
+        <div id="roulette_body"><img id="roulette" src="assets/images/src/producer/roulette.png"/></div>
+        <div id="roulette_pointer"><img src="assets/images/src/producer/pointer.png"/></div>
+        <button id="playroulette" class="btn btn-info" style="width: 300px" ng-click="playroulette()">Let roulette help you decide what to do</button>
+        <button id="closeroulettebtn" class="btn btn-success" ng-click="switchroulette(true)">Quit Game</button>
+        <div id="roulette_img"><img src="{{decision}}"/></div>
+    </div>
+</body>
+</html>

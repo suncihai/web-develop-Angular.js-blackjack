@@ -1,0 +1,88 @@
+#blackjackbtn{
+	position: absolute;
+	left:635px;
+	top:450px;
+}
+
+#blackjack_gif{
+	width:1400px;
+	height:600px;
+}
+
+#blackjack_gif:hover{
+    cursor:pointer;
+}
+
+#card_board{
+	position: relative;
+	width:1400px;
+	height:600px;
+	background-color:green;
+	border-radius:8px;
+	border:2px solid gray; 
+}
+
+#enemycard1{
+	margin-left:80px;
+}
+
+.enemycards{
+	float:left;
+	margin-left:115px;
+	width:150px;
+	height: 225px;
+	border:5px solid white;
+}
+
+#mycard1{
+	margin-left:80px;
+}
+
+.mycards{
+	float:left;
+	margin-left:115px;
+	bottom: 0px;
+	width:150px;
+	height: 225px;
+	border:5px solid white;
+}
+
+#getcardsbtn{
+	margin-top:45px;
+	margin-left:400px;
+}
+
+#winbtn{
+	margin-top:45px;
+	margin-left:80px;
+}
+
+#resetbtn{
+	margin-top:45px;
+	margin-left:80px;
+}
+
+#closeblackjackbtn{
+	margin-top:45px;
+	margin-left:80px;
+}
+
+#result_win{
+   position:absolute;
+   width:200px;
+   height:100px;
+   left:650px;
+   top:330px;
+   font-size: 30px;
+   color:white;
+}
+
+#result_lose{
+   position:absolute;
+   width:200px;
+   height:100px;
+   left:650px;
+   top:330px;
+   font-size: 30px;
+   color:white;
+}
