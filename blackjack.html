@@ -4,23 +4,36 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/roulette.css">
+    <link rel="stylesheet" type="text/css" href="css/blackjack.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.0.js"></script>
-    <script type="text/javascript" src="scripts/roulette.js"></script>
-	<title>roulette</title>
+    <script type="text/javascript" src="scripts/blackjack.js"></script>
+	<title>blackjack</title>
 </head>
 
 <body ng-controller="myCtrl">
-    <div id="roulette_gif" ng-show="rouletteswitch1"><img src="assets/images/src/producer/roulette.gif" ng-click="switchroulette(false)"/> 
-    </div>
+    <div id="blackjack_gif" ng-show="blackjackswitch1"><img src="images/blackjack.gif" ng-click="switchblackjack(false)"/> 
+        </div>
 
-    <div id="roulette_board" ng-show="rouletteswitch2">
-        <div id="roulette_body"><img id="roulette" src="assets/images/src/producer/roulette.png"/></div>
-        <div id="roulette_pointer"><img src="assets/images/src/producer/pointer.png"/></div>
-        <button id="playroulette" class="btn btn-info" style="width: 300px" ng-click="playroulette()">Let roulette help you decide what to do</button>
-        <button id="closeroulettebtn" class="btn btn-success" ng-click="switchroulette(true)">Quit Game</button>
-        <div id="roulette_img"><img src="{{decision}}"/></div>
-    </div>
+        <div id="card_board" ng-show="blackjackswitch2">
+            <div class="enemycards" id="enemycard1"><img src={{enemycard1.src}} style="width:100%"></div>
+            <div class="enemycards"><img src={{enemycard2.src}} style="width:100%"></div>
+            <div class="enemycards"><img src={{enemycard3.src}} style="width:100%"></div>
+            <div class="enemycards"><img src={{enemycard4.src}} style="width:100%"></div>
+            <div class="enemycards"><img src={{enemycard5.src}} style="width:100%"></div>
+            <div style="float:left;width:1400px;height:148px;">
+                  <button id="getcardsbtn" class="btn btn-info" ng-click="getcards()">Get Cards</button>
+                  <button id="winbtn" class="btn btn-danger" ng-click="showresult()">Show Cards</button>
+                  <button id="resetbtn" class="btn btn-warning" ng-click="resetgame()">Reset Game</button>
+                      <button id="closeblackjackbtn" class="btn btn-success" ng-click="switchblackjack(true)">Quit Game</button>
+                  <div id="result_win" ng-if="gameresult_win">You Win</div>
+                  <div id="result_lose" ng-if="gameresult_lose">You Lose</div>
+            </div>
+            <div class="mycards" id="mycard1"><img src={{mycard1.src}} style="width:100%"></div>
+            <div class="mycards"><img src={{mycard2.src}} style="width:100%"></div>
+            <div class="mycards"><img src={{mycard3.src}} style="width:100%"></div>
+            <div class="mycards"><img src={{mycard4.src}} style="width:100%"></div>
+            <div class="mycards"><img src={{mycard5.src}} style="width:100%"></div>
+        </div>
 </body>
 </html>
